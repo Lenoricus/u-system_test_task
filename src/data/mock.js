@@ -5,11 +5,13 @@ import {BiNetworkChart} from "react-icons/bi";
 export const sidebarData = [
     {
         id: 'root',
+        route: 'dashboard',
         title: 'Дашборд',
         icon: <FiHome />,
         links: [
             {
                 id: '1',
+                route: 'dashboard',
                 title: 'Какой-то дашборд',
             },
         ],
@@ -17,33 +19,40 @@ export const sidebarData = [
     {
         id: '2',
         title: 'CMDB',
+        route: 'cmdb',
         icon: <FiDatabase />,
         links: [
             {
                 id: '3',
+                route: 'cmdb',
                 title: 'Серверы и ПК',
             },
             {
                 id: '4',
+                route: 'hypervisors',
                 title: 'Гипервизоры и виртуальные машины',
             },
             {
                 id: '5',
+                route: 'printers',
                 title: 'Принтеры и МФУ',
             },
             {
                 id: '6',
+                route: 'network-devices',
                 title: 'Сетевые устройства',
             },
         ],
     },
     {
         id: '7',
+        route: 'network',
         title: 'Сеть',
         icon: <BiNetworkChart />,
         links: [
             {
                 id: '8',
+                route: 'network',
                 title: 'Какая-то сеть',
             },
         ],

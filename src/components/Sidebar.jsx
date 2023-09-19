@@ -2,16 +2,18 @@ import React from 'react';
 import {TreeItem, TreeView} from "@mui/x-tree-view";
 
 import {sidebarData} from '../data/mock';
+import {Link} from "react-router-dom";
 
 const Sidebar = () => {
     const renderTree = (nodes) => (
         <p className="text-gray-500 mt-4">
-            <TreeItem key={nodes.id} nodeId={nodes.id} label={nodes.title} icon={nodes.icon}>
-
-                {Array.isArray(nodes.links)
-                    ? nodes.links.map((node) => renderTree(node))
-                    : null}
-            </TreeItem>
+            <Link to={`/${nodes.route}`} key={nodes.route}>
+                <TreeItem key={nodes.id} nodeId={nodes.id} label={nodes.title} icon={nodes.icon}>
+                    {Array.isArray(nodes.links)
+                        ? nodes.links.map((node) => renderTree(node))
+                        : null}
+                </TreeItem>
+            </Link>
         </p>
     );
 
