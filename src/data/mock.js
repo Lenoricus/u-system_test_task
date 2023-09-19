@@ -25,7 +25,7 @@ export const sidebarData = [
             },
             {
                 id: '4',
-                title: 'Гипервизоры и вирт. машины',
+                title: 'Гипервизоры и виртуальные машины',
             },
             {
                 id: '5',
@@ -50,7 +50,7 @@ export const sidebarData = [
     },
 ];
 
-export const CMDBData = [
+export const CMDBDataRows = [
     {
         id: '1',
         isActive: true,
@@ -310,5 +310,90 @@ export const CMDBData = [
         dateOfCreating: '30.09.02',
         dateOfUpdating: '25.04.03',
         auditDate: '08.08.04',
+    },
+];
+
+export const CMDBDataColumns = [
+    {
+        field: 'isActive',
+        headerName: '',
+        flex: 1,
+        renderCell: (params) => (
+            <div
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
+                {params.value ? (
+                    <div
+                        style={{
+                            width: '8px',
+                            height: '8px',
+                            borderRadius: '50%',
+                            backgroundColor: 'green',
+                        }}
+                    ></div>
+                ) : (
+                    <div
+                        style={{
+                            width: '8px',
+                            height: '8px',
+                            borderRadius: '50%',
+                            backgroundColor: 'gray',
+                        }}
+                    ></div>
+                )}
+            </div>
+        ),
+    },
+    {
+        field: 'name',
+        headerName: 'Название',
+        flex: 5,
+    },
+    {
+        field: 'type',
+        headerName: 'Тип',
+        flex: 3,
+    },
+    {
+        field: 'location',
+        headerName: 'Расположение',
+        flex: 5,
+    },
+    {
+        field: 'orgUnit',
+        headerName: 'Орг.единица',
+        flex: 3,
+    },
+    {
+        field: 'invNumber',
+        headerName: 'Инв.номер',
+        flex: 3,
+    },
+    {
+        field: 'tags',
+        headerName: 'Теги',
+        flex: 4,
+        sortable: false,
+    },
+    {
+        field: 'dateOfCreating',
+        headerName: 'Дата создания',
+        flex: 5,
+    },
+    {
+        field: 'dateOfUpdating',
+        headerName: 'Дата обновления',
+        flex: 5,
+    },
+    {
+        field: 'auditDate',
+        headerName: 'Дата аудита',
+        flex: 5,
     },
 ];

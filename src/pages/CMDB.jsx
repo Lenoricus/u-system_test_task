@@ -1,91 +1,7 @@
 import React from 'react';
 
-import {DataGrid, GridToolbar} from '@mui/x-data-grid';
-import {CMDBData} from '../data/mock';
-
-const columns = [
-    {
-        field: 'isActive',
-        headerName: '',
-        flex: 1,
-        renderCell: (params) => (
-            <div
-                style={{
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-            >
-                {params.value ? (
-                    <div
-                        style={{
-                            width: '8px',
-                            height: '8px',
-                            borderRadius: '50%',
-                            backgroundColor: 'green',
-                        }}
-                    ></div>
-                ) : (
-                    <div
-                        style={{
-                            width: '8px',
-                            height: '8px',
-                            borderRadius: '50%',
-                            backgroundColor: 'gray',
-                        }}
-                    ></div>
-                )}
-            </div>
-        ),
-    },
-    {
-        field: 'name',
-        headerName: 'Название',
-        flex: 5,
-    },
-    {
-        field: 'type',
-        headerName: 'Тип',
-        flex: 3,
-    },
-    {
-        field: 'location',
-        headerName: 'Расположение',
-        flex: 5,
-    },
-    {
-        field: 'orgUnit',
-        headerName: 'Орг.единица',
-        flex: 3,
-    },
-    {
-        field: 'invNumber',
-        headerName: 'Инв.номер',
-        flex: 3,
-    },
-    {
-        field: 'tags',
-        headerName: 'Теги',
-        flex: 4,
-    },
-    {
-        field: 'dateOfCreating',
-        headerName: 'Дата создания',
-        flex: 5,
-    },
-    {
-        field: 'dateOfUpdating',
-        headerName: 'Дата обновления',
-        flex: 5,
-    },
-    {
-        field: 'auditDate',
-        headerName: 'Дата аудита',
-        flex: 5,
-    },
-];
+import {DataGrid, GridToolbar, ruRU} from '@mui/x-data-grid';
+import {CMDBDataColumns, CMDBDataRows} from '../data/mock';
 
 const CMDB = () => {
     return (
@@ -94,8 +10,9 @@ const CMDB = () => {
                 Серверы и ПК
             </p>
             <DataGrid
-                rows={CMDBData}
-                columns={columns}
+                localeText={ruRU.components.MuiDataGrid.defaultProps.localeText}
+                rows={CMDBDataRows}
+                columns={CMDBDataColumns}
                 initialState={{
                     pagination: {
                         paginationModel: {
