@@ -5,10 +5,13 @@ import {CMDBDataColumns, CMDBDataRows} from '../data/mock';
 
 const CMDB = () => {
     return (
-        <div className="ml-96 mr-16">
-            <p className="text-3xl font-bold text-gray-900 mb-3">
-                Серверы и ПК
+        <div className="">
+            <p className="text-sm text-gray-600 mb-3">
+                CMDB / <span className="font-bold"> Cерверы и ПК </span>
             </p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-8">
+                Серверы и ПК
+            </h1>
             <DataGrid
                 localeText={ruRU.components.MuiDataGrid.defaultProps.localeText}
                 rows={CMDBDataRows}
