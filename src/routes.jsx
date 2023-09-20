@@ -1,5 +1,5 @@
 import React from "react";
-import {createBrowserRouter} from "react-router-dom";
+import {createHashRouter} from "react-router-dom";
 
 import {
     CMDB_ROUTE,
@@ -18,7 +18,7 @@ import Hypervisors from './pages/Hypervisors';
 import NetworkDevices from './pages/NetworkDevices';
 import App from "./App";
 
-export const routes = createBrowserRouter([
+export const routes = createHashRouter([
     {
         path: "/",
         element: <App />,
