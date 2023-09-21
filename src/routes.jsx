@@ -21,31 +21,31 @@ import App from "./App";
 export const routes = createHashRouter([
     {
         path: "/",
-        element: <App />,
+        element: <App/>,
         children: [
             {
                 path: CMDB_ROUTE,
-                element: <CMDB />
+                element: <CMDB/>
             },
             {
                 path: DASHBOARD_ROUTE,
-                element: <Dashboard />
+                element: <Dashboard/>
             },
             {
                 path: NETWORK_ROUTE,
-                element: <Network />
+                element: <Network/>
             },
             {
                 path: PRINTERS_ROUTE,
-                element: <Printers />
+                element: <Printers/>
             },
             {
                 path: HYPERVISORS_ROUTE,
-                element: <Hypervisors />
+                element: <Hypervisors/>
             },
             {
                 path: NETWORK_DEVICES_ROUTE,
-                element: <NetworkDevices />
+                element: <NetworkDevices/>
             },
         ]
     }
