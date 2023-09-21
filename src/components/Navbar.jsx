@@ -11,7 +11,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-2 cursor-pointer p-1 rounded-lg">
                     <img
                         className="rounded-full w-8 h-8"
-                        src="/src/img/avatar.png"
+                        src={"./avatar.png"}
                         alt="user-profile"
                     />
                     <span className="text-gray-500 text-14">null null</span>

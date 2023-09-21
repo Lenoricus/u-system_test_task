@@ -20,7 +20,7 @@ const Sidebar = () => {
     return (
         <div className="ml-3 mt-3 h-screen overflow-auto pb-10 pr-3">
             <div>
-                <img src="/src/img/logo.png" alt="company logo" className="w-32 ml-3"></img>
+                    <img src={"./logo.png"} alt="company logo" className="w-32 ml-3"></img>
             </div>
             <p className="text-gray-400 ml-3 mt-1 font-medium">Powered by U-System</p>
             <div className="mt-5">
