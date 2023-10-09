@@ -1,5 +1,5 @@
 import React from 'react';
-import {FiDatabase, FiHome} from 'react-icons/fi';
+import {FiActivity, FiDatabase} from 'react-icons/fi';
 import {BiNetworkChart} from "react-icons/bi";
 
 export const sidebarData = [
@@ -7,7 +7,7 @@ export const sidebarData = [
         id: 'root',
         route: 'dashboard',
         title: 'Дашборд',
-        icon: <FiHome />,
+        icon: <FiActivity />,
         links: [
             {
                 id: '1',
