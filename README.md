@@ -11,7 +11,7 @@ git clone https://github.com/Lenoricus/u_system_test_task.git
 ```
 cd  u_system_test_task
 ```
-Установите зависимости с помощью менеджера пакетов я npm:
+Установите зависимости с помощью менеджера пакетов npm:
 ```
 npm install
 ```
