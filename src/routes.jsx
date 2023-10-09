@@ -16,6 +16,7 @@ import Network from './pages/Network';
 import Printers from './pages/Printers';
 import Hypervisors from './pages/Hypervisors';
 import NetworkDevices from './pages/NetworkDevices';
+import Homepage from "./pages/Homepage";
 import App from "./App";
 
 export const routes = createHashRouter([
@@ -23,6 +24,10 @@ export const routes = createHashRouter([
         path: "/",
         element: <App/>,
         children: [
+            {
+                path: '',
+                element: <Homepage/>
+            },
             {
                 path: CMDB_ROUTE,
                 element: <CMDB/>
